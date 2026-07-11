@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LAZY｜淘宝货架主图视觉版</title>
+    <meta name="description" content="视觉灵感板与外模面试 Look 作品集。" />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="access-screen" id="accessScreen">
+      <div class="access-brand">LAZY</div>
+      <form class="access-panel" id="accessForm">
+        <span class="access-index">PRIVATE ARCHIVE / 2026</span>
+        <h1>淘宝货架主图<br />视觉版</h1>
+        <p>输入访问密码查看完整作品集</p>
+        <label for="portfolio-password">访问密码</label>
+        <div class="password-row">
+          <input
+            id="portfolio-password"
+            type="password"
+            inputmode="numeric"
+            autocomplete="current-password"
+            placeholder="请输入密码"
+            required
+            autofocus
+          />
+          <button type="submit">进入</button>
+        </div>
+        <div class="access-message" id="accessMessage" role="alert"></div>
+      </form>
+      <div class="access-footer">
+        <span>2 PROJECTS</span>
+        <span>75 PAGES</span>
+      </div>
+    </main>
+
+    <main class="portfolio" id="portfolio" hidden>
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="返回顶部">LAZY</a>
+        <nav aria-label="项目导航">
+          <a href="#visual">01 视觉灵感板</a>
+          <a href="#model">02 外模面试 LOOK</a>
+        </nav>
+        <span class="edition">VISUAL ARCHIVE · 2026</span>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <span class="eyebrow">TAOBAO SHELF / MAIN IMAGE</span>
+          <h1>淘宝货架主图<br />视觉版</h1>
+          <div class="hero-meta">
+            <span>2 PROJECTS</span>
+            <span>75 PAGES</span>
+          </div>
+        </div>
+        <button class="hero-image" type="button" data-open="visual-11" aria-label="放大查看淘宝货架页面">
+          <img src="./assets/visual-11.jpg" alt="LAZY 淘宝货架主图页面" />
+          <span class="image-tag">SOURCE / 01-11</span>
+        </button>
+      </section>
+
+      <section class="project-index" aria-label="项目目录">
+        <a class="index-card" href="#visual">
+          <span class="index-number">01</span>
+          <div>
+            <p>VISUAL DIRECTION</p>
+            <h2>视觉灵感板</h2>
+          </div>
+          <span class="pill">11 PAGES</span>
+          <span class="arrow">↓</span>
+        </a>
+        <a class="index-card dark" href="#model">
+          <span class="index-number">02</span>
+          <div>
+            <p>MODEL CASTING</p>
+            <h2>外模面试 Look</h2>
+          </div>
+          <span class="pill">64 PAGES</span>
+          <span class="arrow">↓</span>
+        </a>
+      </section>
+
+      <section class="archive-section" id="visual">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <p>VISUAL DIRECTION / ORIGINAL DECK</p>
+            <h2>视觉灵感板</h2>
+          </div>
+          <span class="count">11 PAGES</span>
+        </div>
+        <div class="slide-grid visual-grid" id="visualGrid"></div>
+      </section>
+
+      <section class="archive-section model-section" id="model">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div>
+            <p>MODEL CASTING / ORIGINAL DECK</p>
+            <h2>外模面试 Look</h2>
+          </div>
+          <span class="count">64 PAGES</span>
+        </div>
+        <div class="slide-grid model-grid" id="modelGrid"></div>
+      </section>
+
+      <footer>
+        <span>LAZY</span>
+        <span>淘宝货架主图视觉版</span>
+        <a href="#top">BACK TO TOP ↑</a>
+      </footer>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="放大查看页面" hidden>
+      <button class="lightbox-backdrop" type="button" id="lightboxBackdrop" aria-label="关闭"></button>
+      <div class="lightbox-content">
+        <div class="lightbox-bar">
+          <span id="lightboxProject"></span>
+          <span id="lightboxPage"></span>
+          <button type="button" id="lightboxClose">关闭 ×</button>
+        </div>
+        <img id="lightboxImage" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
