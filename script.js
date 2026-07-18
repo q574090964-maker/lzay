@@ -29,7 +29,7 @@ const visualSlides = Array.from({ length: 11 }, (_, index) => {
   };
 });
 
-const modelSlides = Array.from({ length: 64 }, (_, index) => {
+const modelSlides = Array.from({ length: 89 }, (_, index) => {
   const page = index + 1;
   const id = `model-${String(page).padStart(2, "0")}`;
   return {
