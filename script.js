@@ -14,7 +14,16 @@ const visualGrid = document.querySelector("#visualGrid");
 const modelGrid = document.querySelector("#modelGrid");
 
 function getAssetSrc(id) {
-  return window.LAZY_ASSETS?.[id] || `./assets/${id}.jpg`;
+  if (window.LAZY_ASSETS?.[id]) {
+    return window.LAZY_ASSETS[id];
+  }
+
+  const modelPage = /^model-(\d+)$/.exec(id);
+  if (modelPage && Number(modelPage[1]) >= 65) {
+    return `./${id}.jpg`;
+  }
+
+  return `./assets/${id}.jpg`;
 }
 
 const visualSlides = Array.from({ length: 11 }, (_, index) => {
